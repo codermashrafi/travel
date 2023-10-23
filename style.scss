@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+$primaaryColor: #3edf81;
+$textColor: #10221b;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $textColor;
+}
+a {
+  text-decoration: none;
+  color: $textColor;
+}
+@mixin primaryBtn {
+  padding: 12px 30px;
+  border: 2px solid $textColor;
+  margin-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $textColor;
+    color: #fff;
+  }
+}
+header {
+  background: url("./assets/images/header/home-bg-1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .navbar {
+    .navbar-brand {
+      margin-top: 10px;
+      font-size: 26px;
+      font-weight: 700;
+      i {
+        color: $primaaryColor;
+      }
+    }
+  }
+  .headerBanner {
+    padding: 100px 0;
+    .bannerContent {
+      h2 {
+        font-size: 40px;
+      }
+      h1 {
+        font-size: 60px;
+        color: $primaaryColor;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      a {
+        @include primaryBtn();
+      }
+    }
+  }
+}
+.navbar-nav {
+  .nav-item {
+    a {
+      color: #10221b;
+      font-size: 17px;
+      margin-right: 8px;
+      i {
+        font-size: 25px;
+        color: $textColor;
+      }
+    }
+  }
+}
+// idea
+.heading {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+.idea {
+  .singleIdea {
+    text-align: center;
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: $primaaryColor;
+      padding: 16px 0;
+      margin: 0;
+    }
+    p {
+      line-height: 30px;
+    }
+    a {
+      @include primaryBtn();
+    }
+  }
+}
+// idea end
+// outdor
+
+.outdor {
+  background: #eee;
+  padding: 50px 0;
+  .row {
+    .outdorLeft {
+      padding-right: 4rem;
+      padding-bottom: 4rem;
+      img {
+        box-shadow: 3rem 3rem 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+    .outdorRight {
+      h3 {
+        font-size: 30px;
+        color: $primaaryColor;
+        font-weight: 700;
+      }
+      p {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      a {
+        @include primaryBtn();
+      }
+    }
+  }
+}
+
+// outdor end
+// products
+.products {
+  .mainProducts {
+    .singalProducts {
+      text-align: center;
+      border: 2px solid $textColor;
+      .productsImg {
+        height: 300px;
+        img {
+          height: 100%;
+        }
+      }
+      .productsText {
+        h4 {
+          font-size: 20px;
+          font-weight: 700;
+          padding-top: 15px;
+        }
+        p {
+          font-size: 20px;
+          color: $primaaryColor;
+          font-weight: 500;
+        }
+        .stars {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+// products end
+// package
+.package {
+  .singleCard {
+    .card {
+      border-color: $textColor;
+      border-width: 2px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      .card-body {
+        padding-bottom: 0;
+        .card-title {
+          font-size: 20px;
+          font-weight: 700;
+        }
+        .card-text {
+          font-size: 15px;
+          transition: 0.3s;
+          line-height: 30px;
+        }
+        .card-price {
+          font-size: 20px;
+          color: $primaaryColor;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+        a {
+          @include primaryBtn();
+          &:hover {
+            background-color: #fff;
+            color: $textColor;
+          }
+        }
+      }
+      &:hover {
+        background-color: $textColor;
+        color: #fff;
+        .card-text {
+          color: #fff;
+        }
+        a {
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// package end
+// clients
+.clients {
+  .row {
+    .singleClients {
+      .clientsText {
+        p {
+          font-size: 15px;
+          text-transform: capitalize;
+          line-height: 30px;
+          background: #eee;
+        }
+      }
+      .clientsImg {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 30px;
+        img {
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+        }
+        .clientsImg2 {
+          h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 15px;
+            text-transform: capitalize;
+          }
+          p {
+            font-size: 15px;
+            color: $primaaryColor;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+// clients end
+// offer
+.offer {
+  .row {
+    margin-top: 20px;
+    .card {
+      text-align: center;
+      padding: 20px;
+      border: 3px solid $textColor;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $textColor;
+        p {
+          transition: 0.3s ease;
+          color: #fff !important;
+        }
+        img {
+          filter: invert(1);
+        }
+        a {
+          border-color: #fff !important;
+          color: #fff;
+        }
+      }
+
+      img {
+        height: 100px;
+        width: 100px;
+        transition: 0.3s ease;
+      }
+      .card-body {
+        h5 {
+          font-size: 20px;
+          font-weight: 700;
+          color: $primaaryColor;
+        }
+        p {
+          font-size: 15px;
+          line-height: 30px;
+          color: $textColor;
+        }
+        a {
+          @include primaryBtn();
+          &:hover {
+            background-color: #fff;
+            color: $textColor !important;
+          }
+        }
+      }
+    }
+  }
+}
+// offer end
+// post
+.posts {
+  .row {
+    .card {
+      border: none;
+      text-align: center;
+      img {
+        height: 240px;
+        width: 320px;
+        object-fit: cover;
+        margin: 0px auto;
+        border-radius: 5px;
+      }
+      .postsImgIcon {
+        background-color: #10221b;
+        width: 250px;
+        margin: 0 auto;
+        padding: 7px 0;
+        border-radius: 5px;
+        margin-top: -15px;
+        a {
+          color: #fff;
+          font-size: 12px;
+          margin-right: 15px;
+          i {
+            font-size: 12px;
+            color: #3edf81;
+            margin-right: 5px;
+          }
+        }
+      }
+      .card-body {
+        h5 {
+          font-size: 22px;
+          font-weight: 700;
+          text-transform: capitalize;
+          margin: 10px 0 15px 0;
+        }
+        p {
+          line-height: 30px;
+        }
+        a {
+          @include primaryBtn();
+          border: 2px solid $textColor;
+        }
+      }
+    }
+  }
+}
+// post end
+// subscribe
+.subscribe {
+  background-color: #eee;
+  padding: 50px;
+  .row {
+    text-align: center;
+    .subscribeText {
+      p {
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+    .subscribeInput {
+      input {
+        width: 700px;
+        height: 65px;
+        border: 2px solid $textColor;
+        border-radius: 30px;
+        padding: 0 20px;
+      }
+      a {
+        background-color: #10221b;
+        padding: 12px 40px;
+        color: #fff;
+        border: 2px solid #10221b;
+        border-radius: 30px;
+        margin-left: -175px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #fff;
+          color: #10221b;
+        }
+      }
+    }
+  }
+}
+// subscribe end
+// footer
+footer {
+  background-image: url("assets/images/header/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  .row {
+    h4 {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+    h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: #3edf81;
+      }
+      &:hover i {
+        width: 50px;
+      }
+      i {
+        color: $primaaryColor;
+        width: 30px;
+        transition: all 0.3s ease;
+      }
+    }
+    .footerText22 {
+      text-align: center;
+      span {
+        font-size: 20px;
+        color: #3edf81;
+        text-align: center;
+        margin-top: 40px;
+      }
+      h6 {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        margin-top: 40px;
+        display: inline-block;
+      }
+    }
+  }
+}
+// footer end
